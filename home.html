@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS Verhalen</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <nav>
+            <ul class="block">
+                <li>
+                    <a class="logo" href="home.html">
+                        <img src="assets/images/ns%20logo.svg" alt="NS Logo">
+                        <h1>Verhalen</h1>
+                    </a>
+                </li>
+
+                <li class="navbtn">
+                    <ul>
+                        <li>
+                            <a href="login.html">
+                                <img src="assets/images/Icons/persoon.svg" alt="Persoon icoon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <form id="searchForm" class="search" action="zoekresultaten.html" method="get">
+                                <label>
+                                    <input id="searchInput" class="notactive" type="search">
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <p class="subtitle">Dé 99 verhalen website van de NS</p>
+    </header>
+
+    <!--body-->
+    <main>
+        <section class="uitgelicht">
+            <h2>Best bekeken verhalen van deze week</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/babylijm.jpg" alt="">
+                        <h3>Babylijm. BABYLIJM!</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="assets/images/ziekenhuisrestaurant.jpg" alt="">
+                        <h3>Ziekenhuisrestaurant</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="assets/images/verrassing.jpg" alt="">
+                        <h3>Stijloefeningen (99) - Verrassing</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="assets/images/paradijs.jpg" alt="">
+                        <h3>Het paradijs</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="assets/images/presentator.jpg" alt="">
+                        <h3>Stijloefeningen (85) - Presentator die ten onrechte denkt aansluiting te hebben gevonden
+                            bij 'de
+                            kids'
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="midsection">
+            <section class="articles">
+                <h2>99 Verhalen</h2>
+
+                <div class="sortBar">
+                    <a href="home.html"><button class="button1">Alle verhalen</button></a>
+                    <a href="gelikete.html"><button class="button2">Gelikete verhalen</button></a>
+
+                    <!--start bron: https://stackoverflow.com/questions/18179960/how-to-add-a-title-to-a-html-select-tag-->
+                    <select>
+                        <option selected hidden value="Sorteer op">Sorteer op</option>
+                        <option value="populariteit">Populariteit</option>
+                        <option value="alfabetisch">Alfabetisch</option>
+                        <option value="oud">Oud naar nieuw</option>
+                        <option value="meestereacties">Meeste reacties</option>
+                        <option value="minstereacties">Minste reacties</option>
+                    </select>
+                    <!--end bron: https://stackoverflow.com/questions/18179960/how-to-add-a-title-to-a-html-select-tag-->
+                </div>
+
+                <!--start bron: http://html5doctor.com/the-article-element/-->
+                <article>
+                    <!--thumbnail-->
+                    <a href="#">
+                        <img src="assets/images/gebrek.jpg" alt="Lex Immers">
+                    </a>
+                    <!--einde thumbnail-->
+                    <header>
+                        <h3>
+                            <a href="verhaal1.html">Het gebrek</a>
+                        </h3>
+                        <p>Door JW Grift.
+                            <time datetime="2011-03-22">22 maart 2011 </time>- 37 reacties</p>
+                    </header>
+
+                    <div id="buttonclick" class="likeButton">
+                        <p class="totalclicks">65</p>
+                        <img class="harticoon" src="assets/images/Icons/hart.svg" alt="Hartje icoon">
+                    </div>
+
+                    <a href="#">Maatschapij</a>
+                    <p class="articleDescription"> In hun supportershome vieren de wilde- brassen een overwinning op Ajax. Reden voor een
+                        feest.
+                        Net
+                        als je
+                        een hap wilt nemen van je kubba bamia, verschijnt er een magere blonde Hagenees in...</p>
+                </article>
+                <!--end bron: http://html5doctor.com/the-article-element/-->
+
+                <article>
+                    <!--thumbnail-->
+                    <a href="#">
+                        <img src="assets/images/verbetering.jpg" alt="wereld met silhouette">
+                    </a>
+                    <!--einde thumbnail-->
+                    <header>
+                        <h3>
+                            <a href="verhaal2.html">Johan Cruijf</a>
+                        </h3>
+                        <p>Door Oud Zeikwijf.
+                            <time datetime="2016-02-07">7 februari 2016 </time>- 14 reacties</p>
+                    </header>
+
+                    <div id="buttonclick" class="likeButton">
+                        <p class="totalclicks">15</p>
+                        <img class="harticoon" src="assets/images/Icons/hart.svg" alt="Hartje icoon">
+                    </div>
+
+                    <a href="#">Politiek</a>
+                    <p class="articleDescription">Op mijn leeftijd aangekomen kun je niet anders concluderen dan dat de wereld geregeerd wordt
+                        door
+                        het grote
+                        geld. Het lijkt een open deur...</p>
+                </article>
+
+                <article>
+                    <!--thumbnail-->
+                    <a href="#">
+                        <img src="assets/images/toekomst.jpg" alt="Huizen bekijken door loop">
+                    </a>
+                    <!--einde thumbnail-->
+                    <header>
+                        <h3>
+                            <a href="verhaal3.html">Droom</a>
+                        </h3>
+                        <p>Door Dorien de Vylder.
+                            <time datetime="2012-12-10">10 december 2012 </time>- 8 reacties</p>
+                    </header>
+
+                    <div id="buttonclick" class="likeButton">
+                        <p class="totalclicks">30</p>
+                        <img class="harticoon" src="assets/images/Icons/hart.svg" alt="Hartje icoon">
+                    </div>
+
+                    <a href="#">Kort nurks</a>
+                    <p class="articleDescription">Telkens uit je dromen stappen...</p>
+                </article>
+            </section>
+
+            <section class="filterlist">
+                <form>
+                    <fieldset>
+                        <legend>
+                            <h2>Filter op:</h2>
+                        </legend>
+                        <ul>
+                            <!--start bron: https://stackoverflow.com/questions/12129037/correct-semantics-for-ul-in-ul-->
+                            <li>
+                                <legend class="dropbtn">Genre</legend>
+                                <ul class="content">
+                                    <li>
+                                        <input type="checkbox" id="opinie">
+                                        <label for="opinie">Opinie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="maatschapij">
+                                        <label for="maatschapij">Maatschapij</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="politiek">
+                                        <label for="politiek">Politiek</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="religie">
+                                        <label for="religie">Religie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="boulevard">
+                                        <label for="boulevard">Boulevard</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="handelennijverheid">
+                                        <label for="handelennijverheid">Handel en Nijverheid</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="kunst">
+                                        <label for="kunst">Kunst</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fictie">
+                                        <label for="fictie">Fictie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="nonfictie">
+                                        <label for="nonfictie">Non-fictie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="correspondentie">
+                                        <label for="correspondentie">Correspondentie</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="interview">
+                                        <label for="interview">Interview</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="kortnurks">
+                                        <label for="kortnurks">Kort nurks</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="cartoons">
+                                        <label for="cartoons">Cartoons</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <legend class="dropbtn">Leeftijd</legend>
+                                <ul class="content">
+                                    <li>
+                                        <input type="checkbox" id="leeftijd03">
+                                        <label for="leeftijd03">0 tot 3 jaar</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="leeftijd312">
+                                        <label for="leeftijd312">3 tot 12 jaar</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="leeftijd1218">
+                                        <label for="leeftijd1218">12 tot 18 jaar</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="leeftijd18plus">
+                                        <label for="leeftijd18plus">18 jaar of ouder</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <legend class="dropbtn">Leestijd</legend>
+                                <ul class="content">
+                                    <li>
+                                        <input type="checkbox" id="5min">
+                                        <label for="5min">5 minuten</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="10min">
+                                        <label for="10min">10 minuten</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="10plusmin">
+                                        <label for="10plusmin">10+ minuten</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <legend class="dropbtn">Auteur</legend>
+                                <ul class="content">
+                                    <li>
+                                        <input type="checkbox" id="molovich">
+                                        <label for="molovich">Max Molovich</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="hoogeboom">
+                                        <label for="hoogeboom">Ben Hoogeboom</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="oudzeikwijf">
+                                        <label for="oudzeikwijf">Oud Zeikwijf</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="luijten">
+                                        <label for="luijten">Hugo Luijten</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="grits">
+                                        <label for="grits">Grrrits</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="jager">
+                                        <label for="jager">Tom de Jager</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="verwardeman">
+                                        <label for="verwardeman">De verwarde man</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="paap">
+                                        <label for="paap">Jaap de Paap</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="vdberg">
+                                        <label for="vdberg">Wouter van den Berg</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="kittekat">
+                                        <label for="kittekat">Kittekat</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="quest">
+                                        <label for="quest">Berend Quest</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="stavast">
+                                        <label for="stavast">Vrouwke van Stavast</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="suave">
+                                        <label for="suave">Rico Suave</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="jwgrift">
+                                        <label for="jwgrift">JW Grift</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="vylder">
+                                        <label for="vylder">Dorien de Vylder</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!--end bron: https://stackoverflow.com/questions/12129037/correct-semantics-for-ul-in-ul-->
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <p>© Nederlandse Spoorwegen</p>
+    </footer>
+
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1076 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ======================================== UNIVERSAL ======================================== */
+/*
+========================================
+Custom styles
+========================================
+*/
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #083474;
+    font-family: "NS Sans", "Segoe UI", Myriad, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.5625rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*
+========================================
+Navbalk
+========================================
+*/
+
+header nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+header nav li {
+    display: flex;
+}
+
+.navbtn {
+    margin-right: 0.75em;
+}
+
+/*
+========================================
+Header and navigation
+========================================
+*/
+
+h1,
+h2,
+h4 {
+    margin: 0.625rem 0;
+}
+
+.logo h1 {
+    font-size: 1.75em;
+    display: inline-block;
+    margin-left: 0.3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.15em;
+}
+
+header nav {
+    background-color: #ffffff;
+    width: 100%;
+    height: 45px;
+}
+
+.logo img {
+    display: inline-block;
+    width: 4em;
+    margin-left: 0.75em;
+    margin-top: 0.625rem;
+}
+
+header nav li:nth-of-type(1) {
+    display: inline-block;
+}
+
+header nav li:nth-of-type(3) {
+    cursor: pointer;
+}
+
+header nav li:nth-of-type(2) img,
+header nav li:nth-of-type(3) img {
+    vertical-align: middle;
+    width: 3em;
+}
+
+header nav li:nth-of-type(2) img:hover,
+header nav li:nth-of-type(3):hover {
+    opacity: .6;
+}
+
+.subtitle {
+    background-color: #083474;
+    color: #ffffff;
+    padding-left: 0.75em;
+}
+
+.search {
+    margin: auto;
+}
+
+form.search label input[type=search].notactive {
+    width: 10px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+    background-image: url('../images/Icons/zoek.svg');
+    background-size: 4em;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    padding: 18px 0px 12px 40px;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+form.search label input[type=search]:hover {
+    opacity: .6;
+}
+
+form.search label input[type=search].active {
+    width: 250px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+    background-image: url('../images/Icons/zoek.svg');
+    background-size: 4em;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    padding: 18px 0px 12px 40px;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 1px #083474 solid;
+    color: #083474;
+    font-family: "NS Sans", "Segoe UI", Myriad, Verdana, sans-serif;
+    cursor: text;
+}
+
+/* ======================================== HOME ======================================== */
+
+/*
+========================================
+Content slide
+========================================
+Bron: 
+1. https://stackoverflow.com/questions/15603957/css-select-all-child-elements-except-first-two-and-last-two
+2. https://stackoverflow.com/questions/11780589/using-nth-childodd-selector-on-div-image
+*/
+
+.uitgelicht ul {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.uitgelicht li {
+    position: relative;
+}
+
+ul h3 {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+}
+
+.uitgelicht li:nth-child(1) img {
+    object-fit: cover;
+    height: 20em;
+    vertical-align: middle;
+    width: 100%
+}
+
+.uitgelicht li:nth-child(1) {
+    width: 60%;
+}
+
+.uitgelicht li:nth-child(2) img {
+    object-fit: cover;
+    height: 20em;
+    vertical-align: middle;
+    width: 100%
+}
+
+.uitgelicht li:nth-child(2) {
+    width: 40%;
+}
+
+.uitgelicht li:nth-child(n+3) img {
+    object-fit: cover;
+    height: 20em;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.uitgelicht li:nth-child(n+3) {
+    width: 33.3333333%;
+}
+
+/*
+========================================
+Articles
+========================================
+*/
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    max-width: 70em;
+
+}
+
+article a img {
+    object-fit: cover;
+    border-radius: 0.2em;
+    width: 9em;
+    height: 9em;
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    clear: both;
+}
+
+article {
+    margin-right: 0.75em;
+    margin-left: 0.75em;
+    min-height: 10em;
+    clear: both;
+    border-top: 0.08em solid rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+article header {
+    clear: both;
+    width: 75%;
+    display: inline-block;
+}
+
+article header h3 {
+    display: block;
+    clear: both;
+}
+
+article header p {
+    font-size: 0.8em;
+    color: #606060;
+    display: block;
+    clear: both;
+}
+
+article a:nth-of-type(2) {
+    display: inline-block;
+    background-color: #f0bb18;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1em;
+    clear: both;
+}
+
+article p {
+    display: inline;
+    clear: both;
+}
+
+article .likeButton {
+    float: right;
+    background: #083474;
+    width: 60px;
+    height: 60px;
+    color: #ffffff;
+    position: relative;
+    margin-left: 10px;
+}
+
+.likeButton img {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    background: none;
+    clear: both;
+}
+
+.harticoon:active {
+    width: 35px;
+    height: 35px;
+    background: none;
+    clear: both;
+}
+
+.likeButton p {
+    float: right;
+    clear: both;
+    font-size: 12px;
+    background-color: transparent;
+    margin-right: 5px;
+
+}
+
+/*
+========================================
+Links
+========================================
+*/
+
+ul h3:hover {
+    text-decoration: underline;
+}
+
+.uitgelicht img:hover {
+    opacity: 0.8;
+}
+
+a:link,
+a:visited {
+    color: #083474;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: #077ed5;
+    transition: 0.20s ease-in-out;
+}
+
+article a:hover:nth-child(2) {
+    background-color: #ffffff;
+    color: #f0bb18;
+    border: 0.01em solid #f0bb18;
+}
+
+/*
+========================================
+Buttons
+========================================
+*/
+
+.sortBar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70em;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.sortBar button {
+    background: #ffffff;
+    color: #083474;
+    box-shadow: inset 0 -.125rem 0 #E6E6E9;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 1.3em;
+    width: 33.3333333%;
+    height: 2em;
+}
+
+.sortBar button,
+.sortBar select {
+    width: 17em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sortBar select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+    text-align: center;
+    background-image: url(../../assets/images/arrowdown.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center right;
+    font-size: 1.3em;
+    color: #083474;
+    padding-left: 0.5em;
+    border-width: 0em;
+    height: 1.88em;
+    background-color: #ffffff;
+}
+
+.sortBar select:hover,
+.sortBar a button:hover {
+    background-color: #F3F3F4;
+    transition: 0.20s ease-in-out;
+}
+
+.sortBar select:focus {
+    outline: none;
+}
+
+/*
+========================================
+Filter
+========================================
+*/
+
+.midsection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterlist {
+    width: 50em;
+    max-width: 20em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset ul {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    background-color: #ffffff;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+}
+
+.filterlist ul legend {
+    background-color: #F3F3F4;
+    width: auto;
+    display: block;
+    text-align: left;
+    padding: 0.5em;
+    position: relative;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-image: url(../../assets/images/arrowdown.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center right;
+}
+
+.active {
+    background-image: url(../../assets/images/arrowup.png)
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #F3F3F4;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    max-height: 0;
+    transition: max-height 0.8s ease-out;
+}
+
+/* ======================================== LOGIN ======================================== */
+
+/*
+========================================
+Form
+========================================
+*/
+
+.welkom {
+    margin-top: 1em;
+}
+
+.boxes {
+    background-color: #ffffff;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputfield legend {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+
+/*
+========================================
+Inlog- & Registreerbox
+========================================
+*/
+
+.boxes form {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputfield {
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelinput {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.boxes input:not([type='checkbox']) {
+    width: 200px;
+    border: 1px solid #cccccc;
+}
+
+.boxes input:not([type='checkbox']):focus {
+    width: 200px;
+    border: 1px solid #083474;
+    outline: none;
+    transition: 0.20s ease-in-out;
+}
+
+.boxes input:not([type='submit']):valid {
+    border: 1px solid #008000;
+    background-image: url('../images/Icons/valid.png');
+    background-position: right;
+    background-size: 2em;
+    background-repeat: no-repeat;
+}
+
+form.submitted input:not([type='checkbox']):invalid {
+    border:1px solid #ff0000;
+    background-image: url('../images/Icons/kruisje.svg');
+    background-size: 2em;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+/*
+========================================
+Inlogbox
+========================================
+*/
+
+.inlogbox {
+    background-color: #f0bb18;
+}
+
+/*
+========================================
+Registreerbox
+========================================
+*/
+
+.registreerbox {
+    background-color: rgba(240, 187, 24, 0.1);
+}
+
+.gebruikersvoorwaarden {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*
+========================================
+links and buttons
+========================================
+*/
+
+.inlogbox a {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    color: #606060;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.wwherstel {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.wwherstel a:hover {
+    color: #077ed5;
+    transition: 0.20s ease-in-out;
+    text-decoration: underline;
+}
+
+.registreerbox a {
+    text-decoration: underline;
+}
+
+.registreerbox a:hover {
+    text-decoration: underline;
+    color: #077ed5;
+    transition: 0.20s ease-in-out;
+}
+
+.inlogbox fieldset,
+.registreerbox fieldset {
+    width: 80%;
+}
+
+input[type="submit"] {
+    height: 3em;
+    background-color: #077ed5;
+    color: #ffffff;
+    box-shadow: 0 -0.125rem 0 #005CA0 inset;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    transition: background-color 0.15s ease-in-out;
+    cursor: pointer;
+    width: 10em;
+    display: block;
+    bottom: 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #005CA0;
+    box-shadow: 0 -0.125rem 0 #005CA0 inset;
+}
+
+.submitbtn {
+    display: flex;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+/* ======================================== FOOTER ======================================== */
+
+footer {
+    background-color: #ffffff;
+    clear: both;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+footer p {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    margin-left: 1em;
+    font-size: 0.75em;
+}
+
+/* ======================================== VERHALEN ======================================== */
+
+.verhaal1 {
+    width: 100vw;
+}
+
+.image1 {
+    width: 100vw;
+}
+
+.image12 {
+    display: none;
+}
+
+.image13 {
+    display: none;
+}
+/* ======================================== MEDIA QUERIES ======================================== */
+
+@media only screen and (max-device-width: 30em) {
+    /* MOBILE */
+
+    
+    .image1 {
+        display: none;
+    }
+    
+    .image12 {
+        display: none;
+    }
+    
+    .image13 {
+        display: inline-block;
+        width: 100vw;
+    }
+    
+
+    /*
+========================================
+Header and navigation 
+========================================
+*/
+
+    .logo h1 {
+        display: none;
+    }
+
+    header nav li:nth-of-type(2) h1 {
+        display: none;
+    }
+
+    /*
+========================================
+Content slide
+========================================
+*/
+
+    .uitgelicht li:nth-child(1),
+    .uitgelicht li:nth-child(2),
+    .uitgelicht li:nth-child(3) {
+        height: 15em;
+        width: 100%;
+    }
+
+    .uitgelicht li:nth-child(n+3) img {
+        height: 15em;
+    }
+
+    .uitgelicht li:nth-child(n+4) {
+        display: none;
+    }
+
+    /*
+========================================
+Articles
+========================================
+*/
+
+    .sortBar {
+        flex-wrap: wrap;
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+    }
+
+    .sortBar button {
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .sortBar select {
+        margin: 0 auto;
+    }
+
+    .articles {
+        width: 100%;
+    }
+
+    article {
+        margin-bottom: 15px;
+    }
+
+    article a img {
+        width: 100%;
+        height: 6em;
+        border-radius: 0;
+    }
+
+    article a:nth-of-type(2),
+    .articleDescription {
+        display: none;
+    }
+
+    /*
+========================================
+Filter
+========================================
+*/
+
+    .midsection {
+        flex-direction: column;
+    }
+
+    .filterlist {
+        max-width: none;
+        width: 100%;
+    }
+
+    /*
+========================================
+Log in
+========================================
+*/
+
+    .boxes form {
+        height: 550px;
+    }
+
+    .inputfield {
+        min-height: 500px;
+    }
+
+    .labelinput {
+        flex-wrap: wrap;
+    }
+
+    .labelinput input {
+        height: 30px;
+    }
+
+    .wwherstel {
+        justify-content: flex-start;
+    }
+
+    .submitbtn {
+    align-self: center;
+}
+}
+
+@media (min-device-width: 30em) and (max-device-width: 48em) {
+    /* TABLET */
+    .image1 {
+        display: none;
+    }
+    
+    .image12 {
+        display: inline-block;
+        width: 100vw;
+    }
+    
+    .image13 {
+        display: none;
+    }
+    /*
+========================================
+Header and navigation 
+========================================
+*/
+
+    .logo h1 {
+        display: none;
+    }
+
+    header nav li:nth-of-type(2) h1 {
+        display: none;
+    }
+
+    /*
+========================================
+Content slide
+========================================
+*/
+
+    .uitgelicht li:nth-child(1),
+    .uitgelicht li:nth-child(2),
+    .uitgelicht li:nth-child(3) {
+        height: 15em;
+    }
+
+    .uitgelicht li:nth-child(n+2) img {
+        height: 15em;
+    }
+
+    .uitgelicht li:nth-child(1) {
+        width: 100%;
+    }
+
+    .uitgelicht li:nth-child(2) {
+        width: 33.3333333%;
+    }
+
+    .uitgelicht li:nth-child(5) {
+        display: none;
+    }
+
+    /*
+========================================
+Articles
+========================================
+*/
+
+    .sortBar {
+        flex-wrap: wrap;
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+    }
+
+
+    .sortBar  button:nth-child(2) {
+        margin: 0px 5px;
+    }
+
+
+    
+    .sortBar button,
+    .sortBar select {
+        width: 22em;
+    }
+
+
+
+    .articles {
+        width: 70%;
+    }
+
+    article {
+        margin-bottom: 15px;
+    }
+
+    article a img {
+        width: 100%;
+        height: 6em;
+        border-radius: 0;
+    }
+
+    article a:nth-of-type(2),
+    .articleDescription {
+        display: none;
+    }
+}

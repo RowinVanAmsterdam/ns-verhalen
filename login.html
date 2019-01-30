@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn NS</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <nav>
+            <ul class="block">
+                <li>
+                    <a class="logo" href="home.html">
+                        <img src="assets/images/ns%20logo.svg" alt="NS Logo">
+                        <h1>Verhalen</h1>
+                    </a>
+                </li>
+
+                <li class="navbtn">
+                    <ul>
+                        <li>
+                            <a href="login.html">
+                                <img src="assets/images/Icons/persoon.svg" alt="Persoon icoon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <form id="searchForm" class="search" action="zoekresultaten.html" method="get">
+                                <label>
+                                    <input id="searchInput" class="notactive" type="search">
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <p class="subtitle">Dé 99 verhalen website van de NS</p>
+    </header>
+
+    <!--body-->
+    <main>
+        <h2 class="welkom">Welkom bij uw NS-account</h2>
+        <section class="boxes">
+            <form id="formInlog" class="fieldset inlogbox" action="dashboard.html" method="post">
+                <fieldset>
+                    <section class="inputfield">
+                        <legend>Inloggen</legend>
+                        <div class="labelinput">
+                            <label for="email">E-mailadres</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="labelinput">
+                            <label for="password">Wachtwoord</label>
+                            <input type="password" id="password" name="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                            title="Het wachtwoord moet beschikken over zes of meer karakters, met minimaal één cijfer, hoofdletter en kleine letter" required>
+                        </div>
+                        <div class="wwherstel">
+                            <a href="">Wachtwoord vergeten ?</a>
+                        </div>
+                        <input class="submitbtn" type="submit" value="Inloggen">
+                    </section>
+                </fieldset>
+            </form>
+
+            <form id="formRegistreer" class="fieldset registreerbox" action="accountbevestiging.html" method="post">
+                <fieldset>
+                    <section class="inputfield">
+                        <legend>NS-account aanmaken</legend>
+
+                        <div class="labelinput">
+                            <label for="username">Naam:</label>
+                            <input type="text" id="username" name="naam" required>
+                        </div>
+
+                        <div class="labelinput">
+                            <label for="email">E-mailadres</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="labelinput">
+                            <label for="password-new">Wachtwoord</label>
+                            <input type="password" id="password-new" name="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                title="Het wachtwoord moet beschikken over zes of meer karakters, met minimaal één cijfer, hoofdletter en kleine letter"
+                                required>
+                        </div>
+
+                        <div class="labelinput">
+                            <label for="password-confirm">Bevestig wachtwoord:</label>
+                            <input type="password" id="password-confirm" name="wachtwoord" required>
+                        </div>
+
+                        <div class="gebruikersvoorwaarden">
+                            <h4>Gebruikersvoorwaarden</h4>
+                            <input type="checkbox" id="termsofuse" required>
+                            <label for="termsofuse">Ik ga akkoord met de</label>
+                            <a href="http://www.ns.nl/privacy.html">gebruikersvoorwaarden</a>
+                        </div>
+                        <input id="submitButton" class="submitbtn" type="submit" value="Aanmaken">
+                    </section>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <p>© Nederlandse Spoorwegen</p>
+    </footer>
+
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>
